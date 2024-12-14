@@ -66,13 +66,16 @@ export default function Home() {
 					<Flex
 						mobileDirection="column"
 						fillWidth gap="24">
-						<Flex
-							position="relative"
-							flex={2} paddingTop="56" paddingX="xl">
-							<Logo size="xl" icon={false} wordmark={true} style={{ zIndex: '1', fontSize: '40px' }} href="https://once-ui.com"> <span style={{ fontWeight: 'bold' }}>coco-node</span>  {/* "coco" metnini burada yazıyoruz */}
-</Logo>
-
-						</Flex>
+						<Flex position="relative" flex={2} paddingTop="56" paddingX="xl">
+							  <Logo
+							    size="xl"
+							    icon={false}
+							    style={{ zIndex: '1', fontSize: '40px' }}
+							    href="https://once-ui.com"
+							  >
+							    <span style={{ fontWeight: 'bold' }}>coco-node</span> {/* "coco-node" metnini burada yazıyoruz */}
+							  </Logo>
+							</Flex>
 						<Flex
 							position="relative"
 							flex={4} gap="24" marginBottom="104"
