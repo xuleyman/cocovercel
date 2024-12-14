@@ -127,17 +127,17 @@ export default function Home() {
 					gap="12">
 					<Button
 						href="https://github.com/nikolorenzoo"
-						prefixIcon="github" size="m" variant="tertiary">
+						prefixIcon="github" size="l" variant="tertiary">
 						GitHub
 					</Button>
 					<Button
 						href="https://x.com/Coskungurcayy"
-						prefixIcon="discord" size="s" variant="tertiary">
-						Discord
+						prefixIcon="twitter" size="l" variant="tertiary">
+						Twitter
 					</Button><Button
 						href="https://www.t.me/nikolorenzo"
-						prefixIcon="discord" size="s" variant="tertiary">
-						Discord
+						prefixIcon="telegram" size="l" variant="tertiary">
+						Telegram
 					</Button>
 				</Flex>
 			</Flex>
