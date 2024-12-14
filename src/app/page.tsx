@@ -87,7 +87,7 @@ export default function Home() {
 								<span className="font-code">
 									<LetterFx
 										trigger="instant">
-										The crypto world is an ecosystem that combines financial freedom and digital innovation with decentralization.
+										The crypto world is an ecosystem that combines financial freedom and digital innovation with decentralization
 									</LetterFx>
 								</span>
 							</Heading>
