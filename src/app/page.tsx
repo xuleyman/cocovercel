@@ -49,14 +49,7 @@ export default function Home() {
 							position="relative"
 							flex={4} gap="24" marginBottom="104"
 							direction="column">
-							<InlineCode
-								className="shadow-m"
-								style={{
-									width: 'fit-content',
-									padding: 'var(--static-space-8) var(--static-space-16)',
-									backdropFilter: 'blur(var(--static-space-1))'}}>
-								Start by editing <span className="brand-on-background-medium">app/page.tsx</span>
-							</InlineCode>
+							
 							<Heading
 								wrap="balance"
 								variant="display-strong-s">
@@ -67,15 +60,7 @@ export default function Home() {
 									</LetterFx>
 								</span>
 							</Heading>
-							<Button
-								id="readDocs"
-								href="https://once-ui.com/docs"
-								variant="secondary">
-								<Flex alignItems="center">
-									Read docs
-									<Arrow trigger="#readDocs"/>
-								</Flex>
-							</Button>
+							
 						</Flex>
 					</Flex>
 					<Grid
