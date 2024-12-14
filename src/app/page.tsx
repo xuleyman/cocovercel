@@ -52,11 +52,11 @@ export default function Home() {
 							
 							<Heading
 								wrap="balance"
-								variant="display-strong-s">
+								variant="display-strong-xs">
 								<span className="font-code">
 									<LetterFx
 										trigger="instant">
-										Kripto dünyası, finansal özgürlüğü ve dijital inovasyonu merkeziyetsizlikle buluşturan bir ekosistemdir
+										The crypto world is an ecosystem that combines financial freedom and digital innovation with decentralization.
 									</LetterFx>
 								</span>
 							</Heading>
