@@ -28,6 +28,32 @@ export default function Home() {
 		<Flex
 			fillWidth paddingTop="l" paddingX="l"
 			direction="column" alignItems="center" flex={1}>
+			
+			{/* Sosyal medya butonları en üste taşındı */}
+			<Flex
+				as="header"
+				fillWidth
+				justifyContent="flex-end"
+				paddingX="l"
+				paddingY="s"
+				gap="12">
+				<Button
+					href="https://github.com/nikolorenzoo"
+					prefixIcon="github" size="l" variant="tertiary">
+					GitHub
+				</Button>
+				<Button
+					href="https://x.com/Coskungurcayy"
+					prefixIcon="twitter" size="l" variant="tertiary">
+					Twitter
+				</Button>
+				<Button
+					href="https://www.t.me/nikolorenzo"
+					prefixIcon="telegram" size="l" variant="tertiary">
+					Telegram
+				</Button>
+			</Flex>
+
 			<Flex
 				position="relative"
 				as="section" overflow="hidden"
@@ -108,23 +134,6 @@ export default function Home() {
 					variant="body-default-s" onBackground="neutral-weak">
 					© 2024 Once UI, <Link href="https://github.com/once-ui-system/nextjs-starter?tab=MIT-1-ov-file">MIT License</Link>
 				</Text>
-				<Flex
-					gap="12">
-					<Button
-						href="https://github.com/nikolorenzoo"
-						prefixIcon="github" size="l" variant="tertiary">
-						GitHub
-					</Button>
-					<Button
-						href="https://x.com/Coskungurcayy"
-						prefixIcon="twitter" size="l" variant="tertiary">
-						Twitter
-					</Button><Button
-						href="https://www.t.me/nikolorenzo"
-						prefixIcon="telegram" size="l" variant="tertiary">
-						Telegram
-					</Button>
-				</Flex>
 			</Flex>
 		</Flex>
 	);
