@@ -69,7 +69,9 @@ export default function Home() {
 						<Flex
 							position="relative"
 							flex={2} paddingTop="56" paddingX="xl">
-							<Logo size="xl" icon={false} style={{zIndex: '1'}} href="https://once-ui.com"/>
+							<Logo size="xl" icon={false} wordmark={true} style={{ zIndex: '1', fontSize: '40px' }} href="https://once-ui.com"> <span style={{ fontWeight: 'bold' }}>coco-node</span>  {/* "coco" metnini burada yazıyoruz */}
+</Logo>
+
 						</Flex>
 						<Flex
 							position="relative"
