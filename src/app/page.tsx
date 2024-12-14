@@ -43,7 +43,7 @@ export default function Home() {
 						<Flex
 							position="relative"
 							flex={2} paddingTop="56" paddingX="xl">
-							<Logo size="xl" icon={false} style={{zIndex: '1'}} href="https://once-ui.com"/>
+							<Logo size="xl" icon={false} style={{zIndex: '1'}} href="https://www.coco-node.com"/>
 						</Flex>
 						<Flex
 							position="relative"
@@ -52,11 +52,11 @@ export default function Home() {
 							
 							<Heading
 								wrap="balance"
-								variant="display-strong-s">
+								variant="display-strong-xs">
 								<span className="font-code">
 									<LetterFx
 										trigger="instant">
-										Kripto dünyası, finansal özgürlüğü ve dijital inovasyonu merkeziyetsizlikle buluşturan bir ekosistemdir
+										The crypto world is an ecosystem that combines financial freedom and digital innovation with decentralization.
 									</LetterFx>
 								</span>
 							</Heading>
@@ -101,7 +101,7 @@ export default function Home() {
 			</Flex>
 			<Flex
 				as="footer"
-				position="relative"
+				position="center"
 				fillWidth paddingX="l" paddingY="m"
 				justifyContent="space-between">
 				<Text
