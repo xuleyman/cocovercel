@@ -70,7 +70,7 @@ export default function Home() {
 						  <Logo
 						    size="xl"
 						    icon={false}
-						    wordmarkSrc="/coco-node-logo.png"
+						    wordmarkSrc="/coco-node-logo.jpg"
 						    style={{ zIndex: '1' }}
 						    href="https://www.coco-node.com"
 						  />
