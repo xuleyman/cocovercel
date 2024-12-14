@@ -8,19 +8,19 @@ import Link from 'next/link';
 export default function Home() {
 	const links = [
 		{
-			href: "https://once-ui.com/docs/theming",
-			title: "Themes",
-			description: "Style your app in minutes.",
+			href: "http://explorer.coco-node.com",
+			title: "Explorer",
+			description: " ",
 		},
 		{
-			href: "https://once-ui.com/docs/flexComponent",
-			title: "Layout",
-			description: "Build responsive layouts.",
+			href: "http://WWW.coco-node.com/",
+			title: "Services",
+			description: " ",
 		},
 		{
-			href: "https://once-ui.com/docs/typography",
-			title: "Typography",
-			description: "Scale text automatically.",
+			href: "http://WWW.coco-node.com/",
+			title: "Introductions",
+			description: " ",
 		},
 	];
 
@@ -63,7 +63,7 @@ export default function Home() {
 								<span className="font-code">
 									<LetterFx
 										trigger="instant">
-										Helping designers code and developers design
+										Kripto dünyası, finansal özgürlüğü ve dijital inovasyonu merkeziyetsizlikle buluşturan bir ekosistemdir
 									</LetterFx>
 								</span>
 							</Heading>
@@ -126,12 +126,16 @@ export default function Home() {
 				<Flex
 					gap="12">
 					<Button
-						href="https://github.com/once-ui-system/nextjs-starter"
-						prefixIcon="github" size="s" variant="tertiary">
+						href="https://github.com/nikolorenzoo"
+						prefixIcon="github" size="m" variant="tertiary">
 						GitHub
 					</Button>
 					<Button
-						href="https://discord.com/invite/5EyAQ4eNdS"
+						href="https://x.com/Coskungurcayy"
+						prefixIcon="discord" size="s" variant="tertiary">
+						Discord
+					</Button><Button
+						href="https://www.t.me/nikolorenzo"
 						prefixIcon="discord" size="s" variant="tertiary">
 						Discord
 					</Button>
