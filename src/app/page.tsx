@@ -78,22 +78,23 @@ export default function Home() {
       mobileDirection="column"
       fillWidth
       gap="24"
-      alignItems="center"  // Ortalamak için
-      justifyContent="center" // Ortalamak için
+      alignItems="center"  // Resmi ve yazıyı yatayda ortalamak için
+      justifyContent="center" // Resmi ve yazıyı dikeyde ortalamak için
+      style={{ height: '500px' }}  // Yüksekliği manuel ayarla (örneğin 500px)
     >
       <Flex
         position="relative"
         flex={2}
         paddingTop="56"
         paddingX="xl"
-        alignItems="center"  // Resmi ortalamak için
-        justifyContent="center"  // Resmin dikeyde ortalanması için
-        style={{ height: 'auto' }} // Yüksekliği otomatik ayarla
+        alignItems="center"
+        justifyContent="center"
+        style={{ height: 'auto' }} 
       >
         <img
-          src="/coconode.png"  // public klasöründeki logo yolu
+          src="/coconode.png"
           alt="My Logo"
-          style={{ width: '400px', height: 'auto' }}  // Boyutlandırma yapabilirsiniz
+          style={{ width: '400px', height: 'auto' }}
         />
       </Flex>
 
@@ -103,21 +104,16 @@ export default function Home() {
         gap="24"
         marginBottom="104"
         direction="column"
-        alignItems="center"  // Yazıyı ortalamak için
-        justifyContent="center"  // Yazıyı dikeyde ortalamak için
-        style={{
-          display: 'flex',  // Flex kullanarak hizalama sağlıyoruz
-          alignItems: 'center',  // Dikeyde ortala
-          justifyContent: 'center',  // Yatayda ortala
-          height: 'auto'  // Yüksekliği ayarladık
-        }}
+        alignItems="center"
+        justifyContent="center"
+        style={{ height: 'auto' }}
       >
         <Heading
           wrap="balance"
           variant="display-strong-xs"
           style={{
-            textAlign: 'center',  // Yazıyı ortala
-            margin: 0, // Başlık için ekstra boşlukları engelle
+            textAlign: 'center',
+            margin: 0,
           }}
         >
           <span className="font-code">
@@ -161,6 +157,7 @@ export default function Home() {
     </Grid>
   </Flex>
 </Flex>
+
 
 
 
