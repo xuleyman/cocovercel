@@ -58,7 +58,7 @@ export default function Home() {
   position="relative"
   as="section"
   overflow="hidden"
-  fullWidth
+  fillWidth
   minHeight="0"
   maxWidth={68}
   direction="column"
@@ -68,30 +68,30 @@ export default function Home() {
   <Flex
     as="main"
     direction="column"
-    justifyContent="center" // Center content vertically
-    fullWidth
-    minHeight="calc(100vh - 180px)" // Adjust height as needed
+    justifyContent="center"
+    fillWidth
+    fillHeight
     padding="l"
     gap="l"
   >
     <Flex
       mobileDirection="column"
-      fullWidth
+      fillWidth
       gap="24"
-      alignItems="center"  // Center image and text horizontally
+      alignItems="center"  // Ortalamak için ekledik
     >
       <Flex
         position="relative"
         flex={2}
         paddingTop="56"
         paddingX="xl"
-        alignItems="center"
-        justifyContent="center"  // Remove this line
+        alignItems="center"  // Resmi ve yazıyı ortalamak için
+        justifyContent="center"  // Resmi dikeyde ortalamak için
       >
         <img
-          src="/coconode.png"
+          src="/coconode.png"  // public klasöründeki logo yolu
           alt="My Logo"
-          style={{ width: '400px', height: 'auto' }}
+          style={{ width: '400px', height: 'auto' }}  // Boyutlandırma yapabilirsiniz
         />
       </Flex>
 
@@ -101,12 +101,12 @@ export default function Home() {
         gap="24"
         marginBottom="104"
         direction="column"
-        alignItems="center"  // Center text horizontally
+        alignItems="center"  // Yazıyı da ortalamak için ekledik
       >
         <Heading
           wrap="balance"
           variant="display-strong-xs"
-          style={{ textAlign: 'center' }} // Text alignment not needed here
+          style={{ textAlign: 'center' }}  // Yazının ortalanması için
         >
           <span className="font-code">
             <LetterFx trigger="instant">
@@ -116,8 +116,6 @@ export default function Home() {
         </Heading>
       </Flex>
     </Flex>
-  </Flex>
-</Flex>
 
     <Grid
       radius="l"
