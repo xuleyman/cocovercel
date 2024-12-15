@@ -78,7 +78,8 @@ export default function Home() {
       mobileDirection="column"
       fillWidth
       gap="24"
-      alignItems="center"  // Ortalamak için ekledik
+      alignItems="center"  // Ortalamak için
+      justifyContent="center" // Ortalamak için
     >
       <Flex
         position="relative"
@@ -102,14 +103,22 @@ export default function Home() {
         gap="24"
         marginBottom="104"
         direction="column"
-        alignItems="center"  // Yazıyı ortalamak için ekledik
+        alignItems="center"  // Yazıyı ortalamak için
         justifyContent="center"  // Yazıyı dikeyde ortalamak için
-        style={{ height: 'auto' }}  // Yüksekliği otomatik ayarla
+        style={{
+          display: 'flex',  // Flex kullanarak hizalama sağlıyoruz
+          alignItems: 'center',  // Dikeyde ortala
+          justifyContent: 'center',  // Yatayda ortala
+          height: 'auto'  // Yüksekliği ayarladık
+        }}
       >
         <Heading
           wrap="balance"
           variant="display-strong-xs"
-          style={{ textAlign: 'center' }}  // Yazının ortalanması için
+          style={{
+            textAlign: 'center',  // Yazıyı ortala
+            margin: 0, // Başlık için ekstra boşlukları engelle
+          }}
         >
           <span className="font-code">
             <LetterFx trigger="instant">
@@ -152,6 +161,7 @@ export default function Home() {
     </Grid>
   </Flex>
 </Flex>
+
 
 
 			<Flex
