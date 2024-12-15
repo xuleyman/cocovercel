@@ -61,69 +61,92 @@ export default function Home() {
   fillWidth
   minHeight="0"
   maxWidth={68}
-  direction="column"  // Logo ve yazıyı dikey hizalamak için
-  alignItems="center"  // Hem logo hem de yazıyı dikeyde ortalamak için
-  justifyContent="center"  // Yatayda ortalamak için
+  direction="column"
+  alignItems="center"
   flex={1}
 >
   <Flex
     as="main"
-    direction="column"  // Logo ve yazıyı aynı sütunda hizalamak için
+    direction="column"
     justifyContent="center"
-    alignItems="center"  // Her iki öğeyi dikeyde ortalamak için
     fillWidth
     fillHeight
     padding="l"
     gap="l"
   >
-    {/* Logo */}
     <Flex
-      position="relative"
-      flex={2}
-      paddingTop="56"
-      paddingX="xl"
-      alignItems="center"
-      justifyContent="center"
-      style={{ height: 'auto' }}
+      mobileDirection="column"
+      fillWidth
+      gap="24"
+      alignItems="center"  // Ortalamak için ekledik
     >
-      <img
-        src="/coconode.png"  // Logo yolu
-        alt="My Logo"
-        style={{ width: '400px', height: 'auto' }}  // Boyutlandırma yapabilirsiniz
-      />
+      <Flex
+        position="relative"
+        flex={2}
+        paddingTop="56"
+        paddingX="xl"
+        alignItems="center"  // Resmi ve yazıyı ortalamak için
+        justifyContent="center"  // Resmi dikeyde ortalamak için
+      >
+        <img
+          src="/coconode.png"  // public klasöründeki logo yolu
+          alt="My Logo"
+          style={{ width: '400px', height: 'auto' }}  // Boyutlandırma yapabilirsiniz
+        />
+      </Flex>
+
+      <Flex
+        position="relative"
+        flex={4}
+        gap="24"
+        marginBottom="104"
+        direction="column"
+        alignItems="center"  // Yazıyı da ortalamak için ekledik
+      >
+        <Heading
+          wrap="balance"
+          variant="display-strong-xs"
+          style={{ textAlign: 'center' }}  // Yazının ortalanması için
+        >
+          <span className="font-code">
+            <LetterFx trigger="instant">
+              The crypto world is an ecosystem that combines financial freedom and digital innovation with decentralization
+            </LetterFx>
+          </span>
+        </Heading>
+      </Flex>
     </Flex>
 
-    {/* Yazı */}
-    <Flex
-      position="relative"
-      flex={4}
-      gap="24"
-      marginBottom="104"
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      style={{
-        display: 'flex',
-        alignItems: 'center',  // Yazıyı yatayda ortala
-        justifyContent: 'center',  // Yazıyı dikeyde ortala
-        height: 'auto',  // Yüksekliği ayarladık
-      }}
+    <Grid
+      radius="l"
+      border="neutral-medium"
+      borderStyle="solid-1"
+      columns="repeat(3, 1fr)"
+      tabletColumns="1col"
+      mobileColumns="1col"
+      fillWidth
     >
-      <Heading
-        wrap="balance"
-        variant="display-strong-xs"
-        style={{
-          textAlign: 'center',  // Yazıyı ortalamak için
-          margin: 0,  // Başlık için ekstra boşlukları engelle
-        }}
-      >
-        <span className="font-code">
-          <LetterFx trigger="instant">
-            The crypto world is an ecosystem that combines financial freedom and digital innovation with decentralization
-          </LetterFx>
-        </span>
-      </Heading>
-    </Flex>
+      {links.map((link) => (
+        <Link
+          target="_blank"
+          style={{ padding: 'var(--responsive-space-l)' }}
+          key={link.href}
+          href={link.href}
+        >
+          <Flex fillWidth paddingY="8" gap="8" direction="column">
+            <Flex fillWidth gap="12" alignItems="center">
+              <Text variant="body-strong-m" onBackground="neutral-strong">
+                {link.title}
+              </Text>
+              <Icon size="s" name="arrowUpRight" />
+            </Flex>
+            <Text variant="body-default-s" onBackground="neutral-weak">
+              {link.description}
+            </Text>
+          </Flex>
+        </Link>
+      ))}
+    </Grid>
   </Flex>
 </Flex>
 
