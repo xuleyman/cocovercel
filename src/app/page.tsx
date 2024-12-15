@@ -1,7 +1,7 @@
 import React from 'react';
-import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Logo, LetterFx } from '@/once-ui/components';
+import { Heading, Text, Flex, Button, Grid, Icon, LetterFx, Logo } from '@/once-ui/components';
 import Link from 'next/link';
-import Head from 'next/head';  // Head bileşenini import ettik
+import Head from 'next/head';  // `Head` bileşenini import ettik
 
 export default function Home() {
   const links = [
@@ -25,8 +25,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>CocoNode</title>  {/* Başlık burada değişiyor */}
+        <title>Benim Harika Uygulamam</title>  {/* Sayfa başlığını burada değiştiriyoruz */}
+        <meta name="description" content="Açıklama kısmı buraya gelir." /> {/* SEO için meta açıklaması ekleyebilirsiniz */}
       </Head>
+
       <Flex
         fillWidth paddingTop="l" paddingX="l"
         direction="column" alignItems="center" flex={1}>
@@ -70,7 +72,7 @@ export default function Home() {
               <Flex
                 position="relative"
                 flex={2} paddingTop="56" paddingX="xl">
-                <Logo size="xl" icon={false} style={{zIndex: '1'}} href="https://once-ui.com"/>
+                <Logo size="xl" icon={false} style={{ zIndex: '1' }} href="https://once-ui.com" />
               </Flex>
               <Flex
                 position="relative"
@@ -128,7 +130,7 @@ export default function Home() {
           as="footer"
           position="relative"
           fillWidth paddingX="l" paddingY="m"
-          justifyContent="space-between">				
+          justifyContent="space-between">
         </Flex>
       </Flex>
     </>
