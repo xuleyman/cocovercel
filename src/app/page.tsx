@@ -72,7 +72,7 @@ export default function Home() {
 							<img
   src="/coconode.png"  // public klasöründeki logo yolu
   alt="My Logo"
-  style={{ width: '1000px', height: 'auto' }}  // Boyutlandırma yapabilirsiniz
+  style={{ width: '200px', height: 'auto' }}  // Boyutlandırma yapabilirsiniz
 />
 
 						</Flex>
