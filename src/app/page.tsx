@@ -69,13 +69,12 @@ export default function Home() {
 						<Flex
 							position="relative"
 							flex={2} paddingTop="56" paddingX="xl">
-							<Logo
-  size="xl"
-  icon={false}  // Eğer sadece kelime markasını göstermek istiyorsanız
-  wordmarkSrc="/coconode.svg"  // Burada kendi logonuzun yolunu belirtiyorsunuz
-  style={{ zIndex: '1' }}
-  href="https://once-ui.com"
+							<img
+  src="/coconode.png"  // public klasöründeki logo yolu
+  alt="My Logo"
+  style={{ width: 'auto', height: '50px' }}  // Boyutlandırma yapabilirsiniz
 />
+
 						</Flex>
 						<Flex
 							position="relative"
