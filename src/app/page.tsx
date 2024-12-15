@@ -85,8 +85,9 @@ export default function Home() {
         flex={2}
         paddingTop="56"
         paddingX="xl"
-        alignItems="center"  // Resmi ve yazıyı ortalamak için
-        justifyContent="center"  // Resmi dikeyde ortalamak için
+        alignItems="center"  // Resmi ortalamak için
+        justifyContent="center"  // Resmin dikeyde ortalanması için
+        style={{ height: 'auto' }} // Yüksekliği otomatik ayarla
       >
         <img
           src="/coconode.png"  // public klasöründeki logo yolu
@@ -101,7 +102,9 @@ export default function Home() {
         gap="24"
         marginBottom="104"
         direction="column"
-        alignItems="center"  // Yazıyı da ortalamak için ekledik
+        alignItems="center"  // Yazıyı ortalamak için ekledik
+        justifyContent="center"  // Yazıyı dikeyde ortalamak için
+        style={{ height: 'auto' }}  // Yüksekliği otomatik ayarla
       >
         <Heading
           wrap="balance"
@@ -149,6 +152,7 @@ export default function Home() {
     </Grid>
   </Flex>
 </Flex>
+
 
 			<Flex
 				as="footer"
