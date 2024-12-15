@@ -61,112 +61,103 @@ export default function Home() {
   fillWidth
   minHeight="0"
   maxWidth={68}
-  direction="column"
-  alignItems="center"
+  direction="row"  // Yan yana hizalamak için
+  alignItems="center"  // Dikeyde ortalamak için
+  justifyContent="center"  // Yatayda ortalamak için
   flex={1}
 >
   <Flex
     as="main"
-    direction="column"
+    direction="row"  // Logo ve yazıyı aynı satırda hizalamak için
     justifyContent="center"
+    alignItems="center"  // Her iki öğeyi dikeyde ortalamak için
     fillWidth
     fillHeight
     padding="l"
     gap="l"
   >
+    {/* Logo */}
     <Flex
-      mobileDirection="column"
-      fillWidth
-      gap="24"
-      alignItems="center"  // Ortalamak için
-      justifyContent="center"  // Ortalamak için
-      style={{ height: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}  // Flex yapısı
+      position="relative"
+      flex={2}
+      paddingTop="56"
+      paddingX="xl"
+      alignItems="center"
+      justifyContent="center"
+      style={{ height: 'auto' }}
     >
-      {/* Logo */}
-      <Flex
-        position="relative"
-        flex={2}
-        paddingTop="56"
-        paddingX="xl"
-        alignItems="center"
-        justifyContent="center"
-        style={{ height: 'auto' }} // Yüksekliği otomatik ayarla
-      >
-        <img
-          src="/coconode.png" // Logo yolu
-          alt="My Logo"
-          style={{ width: '400px', height: 'auto' }}  // Boyutlandırma yapabilirsiniz
-        />
-      </Flex>
-
-      {/* Yazı */}
-      <Flex
-        position="relative"
-        flex={4}
-        gap="24"
-        marginBottom="104"
-        direction="column"
-        alignItems="center"
-        justifyContent="center"
-        style={{
-          display: 'flex',
-          alignItems: 'center',  // Yazıyı yatayda ortala
-          justifyContent: 'center',  // Yazıyı dikeyde ortala
-          height: 'auto',  // Yüksekliği ayarladık
-        }}
-      >
-        <Heading
-          wrap="balance"
-          variant="display-strong-xs"
-          style={{
-            textAlign: 'center',  // Yazıyı ortalamak için
-            margin: 0,  // Başlık için ekstra boşlukları engelle
-          }}
-        >
-          <span className="font-code">
-            <LetterFx trigger="instant">
-              The crypto world is an ecosystem that combines financial freedom and digital innovation with decentralization
-            </LetterFx>
-          </span>
-        </Heading>
-      </Flex>
+      <img
+        src="/coconode.png"  // Logo yolu
+        alt="My Logo"
+        style={{ width: '400px', height: 'auto' }}  // Boyutlandırma yapabilirsiniz
+      />
     </Flex>
 
-    {/* Diğer içerik (linkler vs.) */}
-    <Grid
-      radius="l"
-      border="neutral-medium"
-      borderStyle="solid-1"
-      columns="repeat(3, 1fr)"
-      tabletColumns="1col"
-      mobileColumns="1col"
-      fillWidth
+    {/* Yazı */}
+    <Flex
+      position="relative"
+      flex={4}
+      gap="24"
+      marginBottom="104"
+      direction="column"
+      alignItems="center"
+      justifyContent="center"
+      style={{
+        display: 'flex',
+        alignItems: 'center',  // Yazıyı yatayda ortala
+        justifyContent: 'center',  // Yazıyı dikeyde ortala
+        height: 'auto',  // Yüksekliği ayarladık
+      }}
     >
-      {links.map((link) => (
-        <Link
-          target="_blank"
-          style={{ padding: 'var(--responsive-space-l)' }}
-          key={link.href}
-          href={link.href}
-        >
-          <Flex fillWidth paddingY="8" gap="8" direction="column">
-            <Flex fillWidth gap="12" alignItems="center">
-              <Text variant="body-strong-m" onBackground="neutral-strong">
-                {link.title}
-              </Text>
-              <Icon size="s" name="arrowUpRight" />
-            </Flex>
-            <Text variant="body-default-s" onBackground="neutral-weak">
-              {link.description}
-            </Text>
-          </Flex>
-        </Link>
-      ))}
-    </Grid>
+      <Heading
+        wrap="balance"
+        variant="display-strong-xs"
+        style={{
+          textAlign: 'center',  // Yazıyı ortalamak için
+          margin: 0,  // Başlık için ekstra boşlukları engelle
+        }}
+      >
+        <span className="font-code">
+          <LetterFx trigger="instant">
+            The crypto world is an ecosystem that combines financial freedom and digital innovation with decentralization
+          </LetterFx>
+        </span>
+      </Heading>
+    </Flex>
   </Flex>
+
+  {/* Diğer içerik (linkler vs.) */}
+  <Grid
+    radius="l"
+    border="neutral-medium"
+    borderStyle="solid-1"
+    columns="repeat(3, 1fr)"
+    tabletColumns="1col"
+    mobileColumns="1col"
+    fillWidth
+  >
+    {links.map((link) => (
+      <Link
+        target="_blank"
+        style={{ padding: 'var(--responsive-space-l)' }}
+        key={link.href}
+        href={link.href}
+      >
+        <Flex fillWidth paddingY="8" gap="8" direction="column">
+          <Flex fillWidth gap="12" alignItems="center">
+            <Text variant="body-strong-m" onBackground="neutral-strong">
+              {link.title}
+            </Text>
+            <Icon size="s" name="arrowUpRight" />
+          </Flex>
+          <Text variant="body-default-s" onBackground="neutral-weak">
+            {link.description}
+          </Text>
+        </Flex>
+      </Link>
+    ))}
+  </Grid>
 </Flex>
-
-
 
 			<Flex
 				as="footer"
