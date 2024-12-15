@@ -78,10 +78,11 @@ export default function Home() {
       mobileDirection="column"
       fillWidth
       gap="24"
-      alignItems="center"  // Resmi ve yazıyı yatayda ortalamak için
-      justifyContent="center" // Resmi ve yazıyı dikeyde ortalamak için
-      style={{ height: '500px' }}  // Yüksekliği manuel ayarla (örneğin 500px)
+      alignItems="center"  // Ortalamak için
+      justifyContent="center"  // Ortalamak için
+      style={{ height: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}  // Flex yapısı
     >
+      {/* Logo */}
       <Flex
         position="relative"
         flex={2}
@@ -89,15 +90,16 @@ export default function Home() {
         paddingX="xl"
         alignItems="center"
         justifyContent="center"
-        style={{ height: 'auto' }} 
+        style={{ height: 'auto' }} // Yüksekliği otomatik ayarla
       >
         <img
-          src="/coconode.png"
+          src="/coconode.png" // Logo yolu
           alt="My Logo"
-          style={{ width: '400px', height: 'auto' }}
+          style={{ width: '400px', height: 'auto' }}  // Boyutlandırma yapabilirsiniz
         />
       </Flex>
 
+      {/* Yazı */}
       <Flex
         position="relative"
         flex={4}
@@ -106,14 +108,19 @@ export default function Home() {
         direction="column"
         alignItems="center"
         justifyContent="center"
-        style={{ height: 'auto' }}
+        style={{
+          display: 'flex',
+          alignItems: 'center',  // Yazıyı yatayda ortala
+          justifyContent: 'center',  // Yazıyı dikeyde ortala
+          height: 'auto',  // Yüksekliği ayarladık
+        }}
       >
         <Heading
           wrap="balance"
           variant="display-strong-xs"
           style={{
-            textAlign: 'center',
-            margin: 0,
+            textAlign: 'center',  // Yazıyı ortalamak için
+            margin: 0,  // Başlık için ekstra boşlukları engelle
           }}
         >
           <span className="font-code">
@@ -125,6 +132,7 @@ export default function Home() {
       </Flex>
     </Flex>
 
+    {/* Diğer içerik (linkler vs.) */}
     <Grid
       radius="l"
       border="neutral-medium"
@@ -157,7 +165,6 @@ export default function Home() {
     </Grid>
   </Flex>
 </Flex>
-
 
 
 
