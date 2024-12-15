@@ -1,4 +1,60 @@
-<Flex
+"use client";
+
+import React from 'react';
+
+import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Logo, LetterFx, Arrow } from '@/once-ui/components';
+import Link from 'next/link';
+
+export default function Home() {
+	const links = [
+		{
+			href: "http://explorer.coco-node.com",
+			title: "Explorer",
+			description: " ",
+		},
+		{
+			href: "http://www.coco-node.com/",
+			title: "Services",
+			description: " ",
+		},
+		{
+			href: "http://www.coco-node.com/",
+			title: "Introductions",
+			description: " ",
+		},
+	];
+
+	return (
+		<Flex
+			fillWidth paddingTop="l" paddingX="l"
+			direction="column" alignItems="center" flex={1}>
+			
+			{/* Sosyal medya butonları en üste taşındı */}
+			<Flex
+				as="header"
+				fillWidth
+				justifyContent="flex-end"
+				paddingX="l"
+				paddingY="s"
+				gap="12">
+				<Button
+					href="https://github.com/nikolorenzoo"
+					prefixIcon="github" size="l" variant="tertiary">
+					GitHub
+				</Button>
+				<Button
+					href="https://x.com/Coskungurcayy"
+					prefixIcon="twitter" size="l" variant="tertiary">
+					Twitter
+				</Button>
+				<Button
+					href="https://www.t.me/nikolorenzo"
+					prefixIcon="telegram" size="l" variant="tertiary">
+					Telegram
+				</Button>
+			</Flex>
+
+			<Flex
   position="relative"
   as="section"
   overflow="hidden"
@@ -35,7 +91,7 @@
         <img
           src="/coconode.png"  // public klasöründeki logo yolu
           alt="My Logo"
-          style={{ width: '400px', height: 'auto', position: 'absolute', top: 0 }}  // Görselin üst hizasını sıfırladık
+          style={{ width: '400px', height: 'auto' }}  // Boyutlandırma yapabilirsiniz
         />
       </Flex>
 
@@ -50,7 +106,7 @@
         <Heading
           wrap="balance"
           variant="display-strong-xs"
-          style={{ textAlign: 'center', position: 'absolute', top: 0 }}  // Yazıyı da üst hizaya göre yerleştirdik
+          style={{ textAlign: 'center' }}  // Yazının ortalanması için
         >
           <span className="font-code">
             <LetterFx trigger="instant">
@@ -93,3 +149,14 @@
     </Grid>
   </Flex>
 </Flex>
+
+
+			<Flex
+				as="footer"
+				position="relative"
+				fillWidth paddingX="l" paddingY="m"
+				justifyContent="space-between">				
+			</Flex>
+		</Flex>
+	);
+}
