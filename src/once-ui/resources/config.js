@@ -16,8 +16,8 @@ const style = {
 
 // default metadata
 const meta = {
-    title: 'Once UI - Your Personalized Design System for Next.js',
-    description: 'An open-source design system and component library for Next.js that emphasizes easy styling and accessibility in UI development.'
+    title: 'CocoNode',
+    description: '...'
 }
 
 
