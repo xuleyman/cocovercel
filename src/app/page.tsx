@@ -109,7 +109,7 @@ export default function Home() {
           style={{ textAlign: 'center' }}  // Yazının ortalanması için
         >
           	<span className="font-code">
- 		 <div style={{ marginTop: '90px' }}>
+ 		 <div style={{ marginTop: '120px' }}>
     			<LetterFx trigger="instant">
      				The crypto world is an ecosystem that combines financial freedom and digital innovation with decentralization
     			</LetterFx>
