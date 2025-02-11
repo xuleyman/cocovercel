@@ -2,14 +2,14 @@ const baseURL = 'demo.once-ui.com'
 
 // default customization applied to the HTML in the main layout.tsx
 const style = {
-    theme:       'light',        // dark | light
+    theme:       'dark',        // dark | light
     neutral:     'gray',        // sand | gray | slate
-    brand:       'moss',        // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-    accent:      'moss',      // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-    solid:       'color',    // color | contrast
-    solidStyle:  'plastic',        // flat | plastic
+    brand:       'cyan',        // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+    accent:      'indigo',      // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+    solid:       'contrast',    // color | contrast
+    solidStyle:  'flat',        // flat | plastic
     border:      'playful',     // rounded | playful | conservative
-    surface:     'filled', // filled | translucent
+    surface:     'translucent', // filled | translucent
     transition:  'all',         // all | micro | macro
     scaling:     '100',         // 90 | 95 | 100 | 105 | 110
 }
